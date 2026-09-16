@@ -16,21 +16,20 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://itaipuacuaovivo.com.br/">
 
-    <!-- Fonte Google Fonts Inter -->
+    <!-- Fontes Google Fonts: Inter para o texto e Pacifico para a logo informal -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
+            --bg-color: #000000;
+            --card-bg: #111111;
+            --text-color: #ffffff;
+            --text-muted: #a1a1aa;
             --brand-red: #ff0000;
             --brand-red-hover: #cc0000;
-            --border-color: #334155;
-            --accent-blue: #38bdf8;
+            --border-color: #27272a;
         }
 
         * {
@@ -49,15 +48,14 @@
             min-height: 100vh;
         }
 
-        /* Header Moderno Glassmorphism */
+        /* Header Fundo Preto Sólido */
         header {
             position: sticky;
             top: 0;
             z-index: 50;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
+            background: #000000;
             border-bottom: 1px solid var(--border-color);
-            padding: 14px 20px;
+            padding: 16px 20px;
         }
 
         .header-content {
@@ -71,25 +69,38 @@
         .brand {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
         }
 
+        /* Estilização da Logo: Informal e Maior */
         .logo {
-            font-size: 20px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
+            font-size: 28px;
             color: #ffffff;
-            text-transform: uppercase;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
         }
 
-        .logo span {
-            color: var(--accent-blue);
+        .logo-itaipuaacu {
+            font-family: 'Pacifico', cursive;
+            font-weight: normal;
+            color: #ffffff;
+            text-transform: none; /* Mantém apenas a inicial maiúscula */
+        }
+
+        .logo-aovivo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+            color: var(--brand-red);
+            text-transform: uppercase; /* Força Caixa Alta */
+            letter-spacing: 1px;
         }
 
         .location-tag {
             font-size: 12px;
             color: var(--text-muted);
-            background: #1e293b;
+            background: #18181b;
             padding: 4px 10px;
             border-radius: 20px;
             border: 1px solid var(--border-color);
@@ -108,7 +119,6 @@
             border-radius: 30px;
             border: 1px solid rgba(239, 68, 68, 0.2);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .live-dot {
@@ -161,13 +171,13 @@
             font-size: 16px;
         }
 
-        /* Container do Vídeo */
+        /* Container do Vídeo Limpo */
         .video-wrapper {
             background: var(--card-bg);
             border-radius: 16px;
             border: 1px solid var(--border-color);
             overflow: hidden;
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
         }
 
         .video-container {
@@ -192,7 +202,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 15px;
-            background: #162032;
+            background: #111111;
             border-top: 1px solid var(--border-color);
         }
 
@@ -237,12 +247,12 @@
         }
 
         .btn-secondary {
-            background: #334155;
+            background: #27272a;
             color: var(--text-color);
         }
 
         .btn-secondary:hover {
-            background: #475569;
+            background: #3f3f46;
         }
 
         /* Cards Informativos */
@@ -258,11 +268,6 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 24px;
-            transition: transform 0.2s ease;
-        }
-
-        .info-card:hover {
-            transform: translateY(-3px);
         }
 
         .info-card .icon {
@@ -292,20 +297,14 @@
             color: var(--text-muted);
             font-size: 13px;
             margin-top: 50px;
-            background: #0b1120;
+            background: #000000;
         }
 
-        footer a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
-
-        /* Responsividade para Celulares */
         @media (max-width: 640px) {
             .header-content {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
+                gap: 12px;
             }
 
             .location-tag {
@@ -339,7 +338,10 @@
 <header>
     <div class="header-content">
         <div class="brand">
-            <div class="logo">Itaipuaçu <span>AO VIVO</span></div>
+            <div class="logo">
+                <span class="logo-itaipuaacu">Itaipuaçu</span>
+                <span class="logo-aovivo">AO VIVO</span>
+            </div>
             <span class="location-tag">Maricá • RJ</span>
         </div>
 
@@ -357,7 +359,6 @@
         <p>Acompanhe o mar, as condições do tempo e a orla de Itaipuaçu através das nossas câmeras.</p>
     </section>
 
-    <!-- Player de Vídeo com Barra de Ações Incorporada -->
     <div class="video-wrapper">
         <section class="video-container">
             <iframe
@@ -376,7 +377,6 @@
             </div>
 
             <div class="action-buttons">
-                <!-- Botão de Inscrição Direta -->
                 <a href="https://www.youtube.com/channel/UClxincfszwNi2zh4qMbYZDw?sub_confirmation=1" target="_blank" class="btn btn-subscribe">
                     <svg width="20" height="14" viewBox="0 0 24 17" fill="currentColor">
                         <path d="M23.498 2.628a3.016 3.016 0 0 0-2.122-2.136C19.505 0 12 0 12 0s-7.505 0-9.377.492A3.017 3.017 0 0 0 .502 2.628C0 4.514 0 8.44 0 8.44s0 3.926.502 5.812a3.016 3.016 0 0 0 2.122 2.136C4.495 16.88 12 16.88 12 16.88s7.505 0 9.377-.492a3.017 3.017 0 0 0 2.122-2.136C24 12.366 24 8.44 24 8.44s0-3.926-.502-5.812zM9.545 12.008V4.872L15.818 8.44l-6.273 3.568z"/>
@@ -384,7 +384,6 @@
                     Inscrever-se no YouTube
                 </a>
 
-                <!-- Botão para Abrir o Chat / Canal -->
                 <a href="https://www.youtube.com/channel/UClxincfszwNi2zh4qMbYZDw/live" target="_blank" class="btn btn-secondary">
                     💬 Abrir Chat ao Vivo
                 </a>
@@ -392,7 +391,6 @@
         </div>
     </div>
 
-    <!-- Cards Informativos e de Engajamento -->
     <section class="info-grid">
         <div class="info-card">
             <span class="icon">🌊</span>
