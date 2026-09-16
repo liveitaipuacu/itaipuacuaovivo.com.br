@@ -2,29 +2,16 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Itaipuaçu ao Vivo | Praia de Itaipuaçu, Maricá - RJ</title>
-
-    <meta name="description"
-          content="Itaipuaçu ao Vivo: acompanhe a praia de Itaipuaçu, em Maricá-RJ, através das câmeras ao vivo e da transmissão no YouTube.">
-
-    <meta name="keywords"
-          content="Itaipuaçu ao vivo, praia de Itaipuaçu ao vivo, câmera Itaipuaçu, câmera ao vivo Itaipuaçu, Itaipuaçu Maricá ao vivo">
-
+    <meta name="description" content="Itaipuaçu ao Vivo: acompanhe a praia de Itaipuaçu, em Maricá-RJ, através das câmeras ao vivo e da transmissão no YouTube.">
+    <meta name="keywords" content="Itaipuaçu ao vivo, praia de Itaipuaçu ao vivo, câmera Itaipuaçu, câmera ao vivo Itaipuaçu, Itaipuaçu Maricá ao vivo">
     <meta name="author" content="Itaipuaçu ao Vivo">
 
-    <meta property="og:title"
-          content="Itaipuaçu ao Vivo | Praia de Itaipuaçu, Maricá - RJ">
-
-    <meta property="og:description"
-          content="Acompanhe Itaipuaçu ao vivo através das câmeras do projeto Itaipuaçu ao Vivo.">
-
+    <meta property="og:title" content="Itaipuaçu ao Vivo | Praia de Itaipuaçu, Maricá - RJ">
+    <meta property="og:description" content="Acompanhe Itaipuaçu ao vivo através das câmeras do projeto Itaipuaçu ao Vivo.">
     <meta property="og:type" content="website">
-
-    <meta property="og:url"
-          content="https://itaipuacuaovivo.com.br/">
+    <meta property="og:url" content="https://itaipuacuaovivo.com.br/">
 
     <style>
         * {
@@ -114,31 +101,40 @@
             box-shadow: 0 5px 25px rgba(0,0,0,0.12);
         }
 
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-}
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
 
-        .video-placeholder strong {
-            font-size: 22px;
-            margin-bottom: 10px;
+        /* Seção do Botão do YouTube */
+        .cta-container {
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 35px;
         }
 
         .youtube-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 13px 22px;
-            background: #d71920;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: #ff0000;
             color: white;
             text-decoration: none;
-            border-radius: 7px;
+            border-radius: 30px;
             font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 14px rgba(255, 0, 0, 0.3);
+            transition: all 0.2s ease-in-out;
         }
 
         .youtube-button:hover {
-            opacity: 0.9;
+            background: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
         }
 
         .cards {
@@ -176,7 +172,6 @@
         }
 
         @media (max-width: 700px) {
-
             .header-content {
                 align-items: flex-start;
             }
@@ -204,7 +199,6 @@
 
 <header>
     <div class="header-content">
-
         <div>
             <div class="logo">Itaipuaçu ao Vivo</div>
             <div class="location">Itaipuaçu • Maricá/RJ</div>
@@ -214,84 +208,59 @@
             <span class="live-dot"></span>
             AO VIVO
         </div>
-
     </div>
 </header>
-
 
 <main>
 
     <section class="intro">
-
         <h1>Itaipuaçu ao Vivo</h1>
-
-        <p>
-            Acompanhe a praia de Itaipuaçu, em Maricá, Rio de Janeiro.
-        </p>
-
+        <p>Acompanhe a praia de Itaipuaçu, em Maricá, Rio de Janeiro.</p>
     </section>
 
+    <!-- Player dinâmico vinculado ao ID do Canal -->
+    <section class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/live_stream?channel=UClxincfszwNi2zh4qMbYZDw&autoplay=1&mute=1"
+            title="Itaipuaçu ao Vivo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </section>
 
-<section class="video-container">
-
-  <iframe
-    src="https://www.youtube.com/embed/SkH5Q6cMcBKk92iv?autoplay=1"
-    title="Itaipuaçu ao Vivo"
-    frameborder="0"
-    allow="autoplay; encrypted-media; picture-in-picture"
-    allowfullscreen>
-</iframe>
-
-</section>
-
+    <!-- Botão de Inscrição Direta no YouTube -->
+    <div class="cta-container">
+        <a href="https://www.youtube.com/channel/UClxincfszwNi2zh4qMbYZDw?sub_confirmation=1" target="_blank" class="youtube-button">
+            <svg width="24" height="17" viewBox="0 0 24 17" fill="currentColor">
+                <path d="M23.498 2.628a3.016 3.016 0 0 0-2.122-2.136C19.505 0 12 0 12 0s-7.505 0-9.377.492A3.017 3.017 0 0 0 .502 2.628C0 4.514 0 8.44 0 8.44s0 3.926.502 5.812a3.016 3.016 0 0 0 2.122 2.136C4.495 16.88 12 16.88 12 16.88s7.505 0 9.377-.492a3.017 3.017 0 0 0 2.122-2.136C24 12.366 24 8.44 24 8.44s0-3.926-.502-5.812zM9.545 12.008V4.872L15.818 8.44l-6.273 3.568z"/>
+            </svg>
+            Inscrever-se no Canal do YouTube
+        </a>
+    </div>
 
     <section class="cards">
-
         <div class="card">
-
             <h2>🌊 Praia de Itaipuaçu</h2>
-
-            <p>
-                Veja em tempo real as condições e o movimento da praia
-                de Itaipuaçu, em Maricá.
-            </p>
-
+            <p>Veja em tempo real as condições e o movimento da praia de Itaipuaçu, em Maricá.</p>
         </div>
 
-
         <div class="card">
-
             <h2>📹 Câmeras ao vivo</h2>
-
-            <p>
-                O projeto Itaipuaçu ao Vivo reúne câmeras transmitindo
-                imagens de diferentes pontos de Itaipuaçu.
-            </p>
-
+            <p>O projeto Itaipuaçu ao Vivo reúne câmeras transmitindo imagens de diferentes pontos de Itaipuaçu.</p>
         </div>
-
 
         <div class="card">
-
             <h2>▶️ Canal no YouTube</h2>
-
-            <p>
-                Acompanhe a transmissão completa e outras informações
-                diretamente no canal Itaipuaçu ao Vivo.
-            </p>
-
+            <p>Acompanhe a transmissão completa e outras informações diretamente no canal Itaipuaçu ao Vivo.</p>
         </div>
-
     </section>
 
 </main>
 
-
 <footer>
-
     Itaipuaçu ao Vivo • Maricá/RJ<br>
     Transmissão independente pela internet
-
 </footer>
 
 </body>
