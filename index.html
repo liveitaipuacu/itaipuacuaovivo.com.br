@@ -114,16 +114,12 @@
             box-shadow: 0 5px 25px rgba(0,0,0,0.12);
         }
 
-        .video-placeholder {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
 
         .video-placeholder strong {
             font-size: 22px;
@@ -236,27 +232,17 @@
     </section>
 
 
-    <section class="video-container">
+<section class="video-container">
 
-        <div class="video-placeholder">
+    <iframe
+        src="https://www.youtube.com/embed/live_stream?channel=UClxincfszwNi2zh4qMbYZDw"
+        title="Itaipuaçu ao Vivo - transmissão ao vivo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
 
-            <strong>🔴 Itaipuaçu ao Vivo</strong>
-
-            <span>
-                A transmissão ao vivo está disponível no YouTube.
-            </span>
-
-            <a
-                class="youtube-button"
-                href="https://www.youtube.com/@itaipuacuaovivo"
-                target="_blank"
-                rel="noopener noreferrer">
-                Assistir no YouTube
-            </a>
-
-        </div>
-
-    </section>
+</section>
 
 
     <section class="cards">
